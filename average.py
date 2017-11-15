@@ -12,10 +12,13 @@ def average(values):
 
     count = 0 #The number of values seen so far.
     total = 0 #The sum of the values seen so far.
+
     for value in values:
         if value is not None:
             total += value
+            count += 1
 
-        count += 1
+            if count == 0:
+                return None
 
     return total / count
